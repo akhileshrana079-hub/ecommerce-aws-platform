@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>E-Commerce AWS Analytics</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <div>
+      <h1>🛒 E-Commerce AWS Analytics</h1>
+      <p>Secure Product Ranking & Cloud Storage Platform</p>
+    </div>
+
+    <div class="aws-status">
+      <span class="status-dot"></span>
+      AWS S3 Connected
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- Dashboard Statistics -->
+
+    <section class="stats">
+
+      <div class="card">
+        <h3>Total Products</h3>
+        <p id="totalProducts">0</p>
+      </div>
+
+      <div class="card">
+        <h3>Cloud Storage</h3>
+        <p>S3</p>
+      </div>
+
+      <div class="card">
+        <h3>Versioning</h3>
+        <p>Enabled</p>
+      </div>
+
+      <div class="card">
+        <h3>Region</h3>
+        <p>eu-north-1</p>
+      </div>
+
+    </section>
+
+
+    <!-- File Management -->
+
+    <section class="panel">
+
+      <h2>📁 Cloud File Management</h2>
+
+      <p class="description">
+        Upload product datasets directly to AWS S3.
+      </p>
+
+      <div class="upload-area">
+
+        <input
+          type="file"
+          id="fileInput"
+          accept=".csv"
+        >
+
+        <button onclick="uploadFile()">
+          Upload to S3
+        </button>
+
+      </div>
+
+      <p id="uploadStatus"></p>
+
+    </section>
+
+
+    <!-- S3 Files -->
+
+    <section class="panel">
+
+      <div class="section-header">
+
+        <div>
+          <h2>☁️ Files Stored in S3</h2>
+          <p class="description">
+            Files currently available in your AWS bucket.
+          </p>
+        </div>
+
+        <button onclick="loadFiles()">
+          Refresh
+        </button>
+
+      </div>
+
+      <div id="filesContainer">
+        Loading files...
+      </div>
+
+    </section>
+
+
+    <!-- Product Ranking -->
+
+    <section class="panel">
+
+      <div class="section-header">
+
+        <div>
+          <h2>🏆 Product Ranking</h2>
+
+          <p class="description">
+            Products ranked using rating, popularity and purchase activity.
+          </p>
+        </div>
+
+        <button onclick="loadRanking()">
+          Generate Ranking
+        </button>
+
+      </div>
+
+      <div id="rankingContainer">
+        Click "Generate Ranking" to analyze products.
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <p>
+      E-Commerce Analytical Platform
+    </p>
+
+    <p>
+      AWS S3 • Node.js • Express
+    </p>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>

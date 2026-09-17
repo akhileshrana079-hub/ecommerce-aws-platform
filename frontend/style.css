@@ -1,0 +1,310 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #1f2937;
+}
+
+
+/* HEADER */
+
+header {
+  background: #111827;
+  color: white;
+
+  padding: 25px 7%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+header p {
+  color: #cbd5e1;
+}
+
+
+.aws-status {
+  background: #1f2937;
+
+  padding: 10px 16px;
+
+  border-radius: 20px;
+
+  font-size: 14px;
+}
+
+.status-dot {
+  display: inline-block;
+
+  width: 10px;
+  height: 10px;
+
+  background: #22c55e;
+
+  border-radius: 50%;
+
+  margin-right: 8px;
+}
+
+
+/* MAIN */
+
+main {
+  width: 86%;
+
+  max-width: 1200px;
+
+  margin: 35px auto;
+}
+
+
+/* STAT CARDS */
+
+.stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 20px;
+
+  margin-bottom: 25px;
+}
+
+.card {
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  color: #64748b;
+
+  font-size: 15px;
+
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 25px;
+
+  font-weight: bold;
+}
+
+
+/* PANELS */
+
+.panel {
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 12px;
+
+  margin-bottom: 25px;
+
+  box-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.panel h2 {
+  margin-bottom: 8px;
+}
+
+.description {
+  color: #64748b;
+
+  margin-bottom: 20px;
+}
+
+
+/* BUTTON */
+
+button {
+  background: #2563eb;
+
+  color: white;
+
+  border: none;
+
+  padding: 11px 18px;
+
+  border-radius: 7px;
+
+  cursor: pointer;
+
+  font-weight: bold;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+
+/* UPLOAD */
+
+.upload-area {
+  display: flex;
+
+  gap: 15px;
+
+  align-items: center;
+}
+
+input[type="file"] {
+  padding: 9px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 7px;
+}
+
+#uploadStatus {
+  margin-top: 15px;
+
+  font-weight: bold;
+}
+
+
+/* SECTION HEADER */
+
+.section-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 15px;
+}
+
+
+/* FILES */
+
+.file-item {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  border: 1px solid #e2e8f0;
+
+  padding: 15px;
+
+  border-radius: 8px;
+
+  margin-bottom: 10px;
+}
+
+.file-name {
+  font-weight: bold;
+}
+
+.file-size {
+  color: #64748b;
+
+  font-size: 13px;
+}
+
+
+/* RANKING */
+
+.rank-item {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  border: 1px solid #e2e8f0;
+
+  padding: 15px;
+
+  border-radius: 8px;
+
+  margin-bottom: 10px;
+}
+
+.rank-number {
+  font-size: 20px;
+
+  font-weight: bold;
+
+  width: 45px;
+}
+
+.product-name {
+  flex: 1;
+
+  font-weight: bold;
+}
+
+.score {
+  font-weight: bold;
+
+  color: #2563eb;
+}
+
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+
+  padding: 30px;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .stats {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  header {
+    flex-direction: column;
+
+    gap: 15px;
+
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .upload-area {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+}
